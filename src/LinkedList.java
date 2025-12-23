@@ -55,6 +55,24 @@ public class LinkedList {
             tail=null;
     }
 
+    //Pop last element
+    public void popLast(){
+        if(head==null)
+            return;
+
+        if(head.next==null){
+            head=tail=null;
+            return;
+        }
+
+        Node current=head;
+        while(current.next!=tail){
+            current=current.next;
+        }
+
+        current.next=null;
+        tail=current;
+    }
     public void print() {
         Node current=head;
         while(current!=null){

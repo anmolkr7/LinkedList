@@ -7,8 +7,8 @@ public class Main {
         list.append(30);
         list.append(70);
 
-        // Delete first element
-        list.pop();
+        // Delete last element
+        list.popLast();
 
         list.print();
     }
