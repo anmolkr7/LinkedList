@@ -7,9 +7,11 @@ public class Main {
         list.append(30);
         list.append(70);
 
-        // Delete last element
-        list.popLast();
-
-        list.print();
+        // Search for 30
+        if(list.search(30)){
+            System.out.println("Node with value 30 found");
+        }else{
+            System.out.println("Node with value 30 not found");
+        }
     }
 }

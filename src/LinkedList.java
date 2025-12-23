@@ -73,6 +73,18 @@ public class LinkedList {
         current.next=null;
         tail=current;
     }
+
+    //Search node by key
+    public boolean search(int key){
+        Node current=head;
+        while(current!=null){
+            if(current.data==key)
+                return true;
+            current=current.next;
+        }
+        return false;
+    }
+
     public void print() {
         Node current=head;
         while(current!=null){
