@@ -1,6 +1,7 @@
 public class LinkedList {
 
     Node head;
+    Node tail;
 
     // Add node at the beginning
     public void add(int data) {
@@ -11,6 +12,17 @@ public class LinkedList {
         }else{
             newNode.next=head;
             head=newNode;
+        }
+    }
+
+    // Add at end
+    public void append(int data){
+        Node newNode=new Node(data);
+        if(head==null){
+            head=tail=newNode;
+        }else{
+            tail.next=newNode;
+            tail=newNode;
         }
     }
 
