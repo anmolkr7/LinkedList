@@ -44,6 +44,17 @@ public class LinkedList {
         }
     }
 
+    // Delete first element
+    public void pop(){
+        if(head==null)
+            return;
+
+        head=head.next;
+
+        if(head==null)
+            tail=null;
+    }
+
     public void print() {
         Node current=head;
         while(current!=null){
