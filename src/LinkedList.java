@@ -26,6 +26,24 @@ public class LinkedList {
         }
     }
 
+    //Insert new node after given node
+    public void insertAfter(int key,int data){
+        Node current=head;
+
+        while(current!=null){
+            if(current.data==key){
+                Node newNode=new Node(data);
+                newNode.next=current.next;
+                current.next=newNode;
+
+                if(current==tail)
+                    tail=newNode;
+                return;
+            }
+            current=current.next;
+        }
+    }
+
     public void print() {
         Node current=head;
         while(current!=null){
